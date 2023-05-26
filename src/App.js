@@ -3,6 +3,8 @@ import AddUser from './components/Adduser';
 import Table from "./components/Table.js";
 
 import { Routes, Route } from 'react-router-dom';
+import UpdateUser from './components/UpdateUser';
+
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Table />} />
         <Route path='/adduser' element={<AddUser />} />
-        <Route path='/updateUSer:id' element={<AddUser />} />
+        <Route path='/update' element={<UpdateUser />} />
       </Routes>
     </div>
   );

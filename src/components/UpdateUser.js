@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate} from "react-router-dom";
 
-export default function AddUser() {
+export default function UpdateUser() {
 const navigate= useNavigate()
   const [userData, setUserData] = useState({
     firstname: "",
@@ -26,7 +26,7 @@ const navigate= useNavigate()
     const { firstname, lastname, email, phoneNumber, age, password } = userData;
     if (firstname && lastname && email && phoneNumber && age && password) {
       const res = fetch(
-        'http://65.0.93.119:4000/adduser',
+        'http://65.0.93.119:4000/update',
         {
           method: "POST",
           headers: {
@@ -49,7 +49,7 @@ const navigate= useNavigate()
         
         });
 
-       alert("User added successfully");
+       alert("User updated successfully");
        navigate("/");
       } else {
         alert("Before Submitted please fill the form!");
